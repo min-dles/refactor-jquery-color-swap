@@ -3,6 +3,7 @@ $(document).ready(onReady);
 function onReady(){
     console.log('You are ready to code more! 😎');
     createGenerateButton();
+    $('#generate-button').on('click', '#submit', generateDivElements);
 }
 
 /* <div id="generate-button"></div> */
@@ -11,8 +12,11 @@ function createGenerateButton(){
     $('#generate-button').append('<button id="submit" class="buttons">Generate 👾</button>');
 }
 
-
+// STEP TWO: append a '<div>' element when 'Generate" button is clicked: 
 /* <div id="colors-container"></div> */
+function generateDivElements() {
+    $('#colors-container').append('<div class="new-div"></div>');
+}
 
 
 
