@@ -2,7 +2,20 @@ $(document).ready(onReady);
 
 function onReady(){
     console.log('You are ready to code more! 😎');
+    createGenerateButton();
 }
+
+/* <div id="generate-button"></div> */
+// STEP ONE: create 'Generate' button
+function createGenerateButton(){
+    $('#generate-button').append('<button id="submit" class="buttons">Generate 👾</button>');
+}
+
+
+/* <div id="colors-container"></div> */
+
+
+
 
 // Follow the steps below to complete the code challenge:
 
