@@ -6,7 +6,7 @@ function onReady(){
     console.log('You are ready to code more! 😎');
     createGenerateButton();
     $('#generate-button').on('click', '#submit', generateDivElements);
-
+    $('#colors-container').on('click', '.delete', transformDivs);
 }
 
 /* <div id="generate-button"></div> */
@@ -24,9 +24,14 @@ function generateDivElements() {
     $('#colors-container').append(
         `<div class="new-div">
             <p>${currentCount}</p>
+            <button class="yellow buttons">${'YELLOW ⭐️'}</button>
+            <button class="delete buttons">${'DELETE ❌'}</button>
         </div>`);
 }
 
+function transformDivs() {
+    $(this).remove().parent().parent().parent();
+}
 
 
 
