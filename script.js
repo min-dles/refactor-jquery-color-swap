@@ -1,9 +1,12 @@
 $(document).ready(onReady);
 
+let currentCount = 0;
+
 function onReady(){
     console.log('You are ready to code more! 😎');
     createGenerateButton();
     $('#generate-button').on('click', '#submit', generateDivElements);
+
 }
 
 /* <div id="generate-button"></div> */
@@ -15,7 +18,13 @@ function createGenerateButton(){
 // STEP TWO: append a '<div>' element when 'Generate" button is clicked: 
 /* <div id="colors-container"></div> */
 function generateDivElements() {
-    $('#colors-container').append('<div class="new-div"></div>');
+    // STEP THREE: increment the count of blocks each time 'Generate' is clicked, 
+    // add a <p> element to the <div>s
+    currentCount++;
+    $('#colors-container').append(
+        `<div class="new-div">
+            <p>${currentCount}</p>
+        </div>`);
 }
 
 
