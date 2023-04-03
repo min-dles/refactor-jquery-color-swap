@@ -6,7 +6,8 @@ function onReady(){
     console.log('You are ready to code more! 😎');
     createGenerateButton();
     $('#generate-button').on('click', '#submit', generateDivElements);
-    $('#colors-container').on('click', '.delete', transformDivs);
+    $('#colors-container').on('click', '.delete', deleteDiv);
+    $('#colors-container').on('click', '.yellow', changeBackground)
 }
 
 /* <div id="generate-button"></div> */
@@ -29,8 +30,12 @@ function generateDivElements() {
         </div>`);
 }
 
-function transformDivs() {
-    $(this).remove().parent().parent().parent();
+function deleteDiv() {
+    $(this).parent().remove();
+}
+
+function changeBackground() {
+    $(this).parent().toggleClass('yellow-background');
 }
 
 

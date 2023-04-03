@@ -30,3 +30,9 @@ footer h3 {
 .yellow, .delete {
     margin: 1em;
 }
+
+.yellow-background {
+    background-color: gold;
+    width: 150px;
+    height: 150px;
+}
